@@ -30,13 +30,15 @@
     });
   };
 
-  $.ajax({
-    type: 'GET',
-    dataType: 'text',
-    url: serverUrl,
-  }).done(function (response) {
-    Window.swimmer(response);
-  })
+  setInterval(function(){
+    $.ajax({
+      type: 'GET',
+      dataType: 'text',
+      url: serverUrl,
+    }).done(function (response) {
+      Window.swimmer(response);
+    })
+  }, 1000);
 
   $('form').on('submit', function(e) {
     e.preventDefault();
