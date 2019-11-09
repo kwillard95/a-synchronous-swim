@@ -38,7 +38,7 @@
     }).done(function (response) {
       Window.swimmer(response);
     })
-  }, 10000);
+  }, 1000);
 
   $('form').on('submit', function(e) {
     e.preventDefault();
